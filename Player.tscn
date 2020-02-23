@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/graphics/sprites/Character_Idle_Right.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/sprites/Character_Move_Right.png" type="Texture" id=3]
+[ext_resource path="res://Player.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12.2809, 17.8931 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 135.411, 77.378 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walk_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.90262, 3.5674 )
+shape = SubResource( 2 )
