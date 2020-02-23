@@ -23,5 +23,8 @@ func _physics_process(delta):
 func _process(delta):
 	if Input.is_action_pressed('ui_right'):
 		$AnimatedSprite.play('walk_right')
+	elif Input.is_action_pressed('ui_left'):
+		$AnimatedSprite.play('walk_left')
 	else:
 		$AnimatedSprite.stop()
+
