@@ -14,14 +14,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "walk_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walk_down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ],
@@ -29,16 +29,16 @@ animations = [ {
 "name": "walk_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "walk_up",
+"name": "walk_down",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 12.2809, 17.8931 )
+extents = Vector2( 13.625, 27.3306 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 position = Vector2( 135.411, 77.378 )
 script = ExtResource( 4 )
 
@@ -47,5 +47,5 @@ frames = SubResource( 1 )
 animation = "walk_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.90262, 3.5674 )
+position = Vector2( -0.150697, 1.2315 )
 shape = SubResource( 2 )
