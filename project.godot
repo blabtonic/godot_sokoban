@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Crate",
 "language": "GDScript",
 "path": "res://Crate.gd"
+}, {
+"base": "Crate",
+"class": "physicsCrate",
+"language": "GDScript",
+"path": "res://physicsCrate.gd"
 } ]
 _global_script_class_icons={
-"Crate": ""
+"Crate": "",
+"physicsCrate": ""
 }
 
 [application]

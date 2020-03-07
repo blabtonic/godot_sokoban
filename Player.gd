@@ -39,5 +39,4 @@ func check_box_collision(velocity):
 		return
 	var crate = get_slide_collision(0).collider as Crate
 	if crate:
-		print(velocity)
 		crate.push(push_speed * velocity)
